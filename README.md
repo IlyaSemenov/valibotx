@@ -14,12 +14,12 @@ npm install valibot valibotx
 
 ## Use
 
-Just import `valibotx` instead of `valibot` and enjoy the new methods:
+Simply import `valibotx` instead of `valibot` and enjoy both the original and the new methods:
 
 ```ts
 import * as v from "valibotx"
 
-const usernameSchema = v.string([v.nonEmpty()])
+const usernameSchema = v.string([v.trim(), v.nonEmpty(), v.maxLength(100)])
 ```
 
 ## Extensions
@@ -29,6 +29,10 @@ const usernameSchema = v.string([v.nonEmpty()])
 Shortcut for `minLength(1)`, similar to zod's [nonEmpty](https://github.com/colinhacks/zod#nonempty).
 
 Related issue: https://github.com/fabian-hiller/valibot/issues/171
+
+### `trim`
+
+Shortcut for `toTrimmed(1)`, named after zod's [trim](https://github.com/colinhacks/zod/#strings).
 
 ### `BaseSchemaMaybeAsync`
 
