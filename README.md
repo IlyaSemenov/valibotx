@@ -30,7 +30,7 @@ Shortcut for `minLength(1)`, similar to zod's [nonEmpty](https://github.com/coli
 
 Related issue: https://github.com/fabian-hiller/valibot/issues/171
 
-### `BaseSchemaAsync`
+### `BaseSchemaMaybeAsync`
 
 Shortcut for `BaseSchema<Input, Output> | BaseSchemaAsync<Input, Output>`.
 
