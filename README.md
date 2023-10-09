@@ -19,7 +19,7 @@ Just import `valibotx` instead of `valibot` and enjoy the new methods:
 ```ts
 import * as v from "valibotx"
 
-const usernameSchema = v.string([v.toTrimmed(), v.nonEmpty()])
+const usernameSchema = v.string([v.nonEmpty()])
 ```
 
 ## Extensions
