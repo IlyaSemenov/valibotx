@@ -1,0 +1,5 @@
+---
+"valibotx": major
+---
+
+Initial release.
