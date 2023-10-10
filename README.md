@@ -32,7 +32,7 @@ Related issue: https://github.com/fabian-hiller/valibot/issues/171
 
 ### `trim`
 
-Shortcut for `toTrimmed(1)`, named after zod's [trim](https://github.com/colinhacks/zod/#strings).
+Shortcut for `toTrimmed()`, named after zod's [trim](https://github.com/colinhacks/zod/#strings).
 
 ### `BaseSchemaMaybeAsync`
 
