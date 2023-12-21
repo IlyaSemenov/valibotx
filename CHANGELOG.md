@@ -1,5 +1,11 @@
 # valibotx
 
+## 1.2.0
+
+### Minor Changes
+
+- 95090cd: Add safeParseOutput.
+
 ## 1.1.0
 
 ### Minor Changes
