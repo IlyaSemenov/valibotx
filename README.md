@@ -22,7 +22,7 @@ import * as v from "valibotx"
 const usernameSchema = v.string([v.trim(), v.nonEmpty(), v.maxLength(100)])
 ```
 
-## Extensions
+## Pipelines
 
 ### `nonEmpty`
 
@@ -34,9 +34,13 @@ Related issue: https://github.com/fabian-hiller/valibot/issues/171
 
 Shortcut for `toTrimmed()`, named after zod's [trim](https://github.com/colinhacks/zod/#strings).
 
+## Parse data
+
 ### `safeParseOutput`
 
 Shortcut for `safeParse().output`. Returns `undefined` for failed parse.
+
+## Types
 
 ### `BaseSchemaMaybeAsync`
 
