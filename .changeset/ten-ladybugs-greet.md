@@ -1,0 +1,5 @@
+---
+"valibotx": minor
+---
+
+Add safeParseOutput.

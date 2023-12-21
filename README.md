@@ -34,6 +34,10 @@ Related issue: https://github.com/fabian-hiller/valibot/issues/171
 
 Shortcut for `toTrimmed()`, named after zod's [trim](https://github.com/colinhacks/zod/#strings).
 
+### `safeParseOutput`
+
+Shortcut for `safeParse().output`. Returns `undefined` for failed parse.
+
 ### `BaseSchemaMaybeAsync`
 
 Shortcut for `BaseSchema<Input, Output> | BaseSchemaAsync<Input, Output>`.
