@@ -1,5 +1,11 @@
 # valibotx
 
+## 1.3.0
+
+### Minor Changes
+
+- 5b30e4b: Add `integerNumber` and `naturalNumber`. Fix #5.
+
 ## 1.2.0
 
 ### Minor Changes
