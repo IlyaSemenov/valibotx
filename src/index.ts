@@ -3,6 +3,8 @@ export * from "valibot"
 
 // Export extensions
 export * from "./BaseSchemaMaybeAsync"
+export * from "./integerNumber"
+export * from "./naturalNumber"
 export * from "./nonEmpty"
 export * from "./safeParseOutput"
 export * from "./trim"

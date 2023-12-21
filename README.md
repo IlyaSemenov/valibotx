@@ -22,6 +22,16 @@ import * as v from "valibotx"
 const usernameSchema = v.string([v.trim(), v.nonEmpty(), v.maxLength(100)])
 ```
 
+## Schemas
+
+### `integerNumber`
+
+Shortcut for `number([integer()])`.
+
+### `naturalNumber`
+
+Shortcut for `number([integer(), minValue(1)])`. Useful for validating database IDs.
+
 ## Pipelines
 
 ### `nonEmpty`
