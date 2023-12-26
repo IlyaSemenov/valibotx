@@ -26,11 +26,11 @@ const usernameSchema = v.string([v.trim(), v.nonEmpty(), v.maxLength(100)])
 
 ### `integerNumber`
 
-Shortcut for `number([integer()])`.
+Validate integer number.
 
 ### `naturalNumber`
 
-Shortcut for `number([integer(), minValue(1)])`. Useful for validating database IDs.
+Validate natural number (positive integer).
 
 ## Pipelines
 
