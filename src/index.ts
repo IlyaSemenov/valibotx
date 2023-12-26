@@ -2,9 +2,9 @@
 export * from "valibot"
 
 // Export extensions
-export * from "./BaseSchemaMaybeAsync"
-export * from "./integerNumber"
-export * from "./naturalNumber"
-export * from "./nonEmpty"
-export * from "./safeParseOutput"
-export * from "./trim"
+export * from "./methods"
+export * from "./schemas"
+export * from "./transformations"
+export * from "./types"
+export * from "./utils"
+export * from "./validations"

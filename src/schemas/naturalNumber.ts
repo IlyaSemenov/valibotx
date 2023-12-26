@@ -2,38 +2,39 @@ import {
   ErrorMessage,
   getDefaultArgs,
   integer,
+  minValue,
   number,
   NumberSchema,
   Pipe,
 } from "valibot"
 
-import { mergePipes } from "./pipe"
+import { mergePipes } from "../utils"
 
 /**
- * Creates an integer number schema.
+ * Creates a natural (positive integer) number schema.
  *
  * @param pipe A validation and transformation pipe.
  *
  * @returns A number schema.
  */
-export function integerNumber(pipe?: Pipe<number>): NumberSchema
+export function naturalNumber(pipe?: Pipe<number>): NumberSchema
 /**
- * Creates an integer number schema.
+ * Creates a natural (positive integer) number schema.
  *
  * @param error The error message.
  * @param pipe A validation and transformation pipe.
  *
  * @returns A number schema.
  */
-export function integerNumber(
+export function naturalNumber(
   error?: ErrorMessage,
   pipe?: Pipe<number>,
 ): NumberSchema
 
-export function integerNumber(
+export function naturalNumber(
   arg1?: ErrorMessage | Pipe<number>,
   arg2?: Pipe<number>,
 ) {
   const [error, pipe] = getDefaultArgs(arg1, arg2)
-  return number(error, mergePipes([integer()], pipe))
+  return number(error, mergePipes([integer(), minValue(1)], pipe))
 }
