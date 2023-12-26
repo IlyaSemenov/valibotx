@@ -50,6 +50,14 @@ Shortcut for `toTrimmed()`, named after zod's [trim](https://github.com/colinhac
 
 Shortcut for `safeParse().output`. Returns `undefined` for failed parse.
 
+## Methods
+
+### `coerceArray`
+
+Coerces the input to be an array.
+
+Useful for validating query string inputs such as `?id=1&id=2` which are usually typed as `string | string[]` are require cumbersome checks.
+
 ## Types
 
 ### `BaseSchemaMaybeAsync`
