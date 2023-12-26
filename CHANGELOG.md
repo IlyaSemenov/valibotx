@@ -1,5 +1,11 @@
 # valibotx
 
+## 1.4.0
+
+### Minor Changes
+
+- 2334f50: Add `coerceArray`. Fix #4.
+
 ## 1.3.0
 
 ### Minor Changes
