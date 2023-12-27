@@ -56,7 +56,14 @@ Shortcut for `safeParse().output`. Returns `undefined` for failed parse.
 
 Coerces the input to be an array.
 
-Useful for validating query string inputs such as `?id=1&id=2` which are usually typed as `string | string[]` are require cumbersome checks.
+Useful for normalizing query string inputs such as `?id=1&id=2` which are presented as `string | string[]`.
+
+Usage:
+
+```ts
+// works for both single ID and multiple IDs
+const ids = v.parse(v.coerceArray(v.array(v.string())), query.id)
+```
 
 ## Types
 
