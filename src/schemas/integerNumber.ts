@@ -1,6 +1,6 @@
 import {
+  defaultArgs,
   ErrorMessage,
-  getDefaultArgs,
   integer,
   number,
   NumberSchema,
@@ -34,6 +34,6 @@ export function integerNumber(
   arg1?: ErrorMessage | Pipe<number>,
   arg2?: Pipe<number>,
 ) {
-  const [error, pipe] = getDefaultArgs(arg1, arg2)
+  const [error, pipe] = defaultArgs(arg1, arg2)
   return number(error, mergePipes([integer()], pipe))
 }

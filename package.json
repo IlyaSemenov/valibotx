@@ -39,11 +39,11 @@
     "prettier": "^3.0.3",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
-    "valibot": "<0.21",
+    "valibot": "^0.28.1",
     "vite-tsconfig-paths": "^4.2.1",
     "vitest": "^0.34.6"
   },
   "peerDependencies": {
-    "valibot": ">=0.17 <0.21"
+    "valibot": ">=0.28"
   }
 }

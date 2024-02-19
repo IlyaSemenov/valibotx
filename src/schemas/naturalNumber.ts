@@ -1,6 +1,6 @@
 import {
+  defaultArgs,
   ErrorMessage,
-  getDefaultArgs,
   integer,
   minValue,
   number,
@@ -35,6 +35,6 @@ export function naturalNumber(
   arg1?: ErrorMessage | Pipe<number>,
   arg2?: Pipe<number>,
 ) {
-  const [error, pipe] = getDefaultArgs(arg1, arg2)
+  const [error, pipe] = defaultArgs(arg1, arg2)
   return number(error, mergePipes([integer(), minValue(1)], pipe))
 }

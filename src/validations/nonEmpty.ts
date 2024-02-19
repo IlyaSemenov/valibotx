@@ -8,5 +8,5 @@ import { ErrorMessage, minLength } from "valibot"
  * @returns A validation function.
  */
 export function nonEmpty<TInput extends string | any[]>(error?: ErrorMessage) {
-  return minLength<TInput>(1, error)
+  return minLength<TInput, 1>(1, error)
 }
