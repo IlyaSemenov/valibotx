@@ -1,5 +1,11 @@
 # valibotx
 
+## 1.6.0
+
+### Minor Changes
+
+- 938e65d: Update to valibot 0.28 API.
+
 ## 1.5.1
 
 ### Patch Changes
