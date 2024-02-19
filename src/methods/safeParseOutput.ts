@@ -17,3 +17,5 @@ export function safeParseOutput<TSchema extends BaseSchema>(
   const result = safeParse(schema, input, info)
   return result.success ? result.output : undefined
 }
+
+export const tryParse = safeParseOutput

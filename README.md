@@ -50,6 +50,8 @@ Shortcut for `toTrimmed()`, named after zod's [trim](https://github.com/colinhac
 
 Shortcut for `safeParse().output`. Returns `undefined` for failed parse.
 
+Alias: `tryParse`.
+
 ## Methods
 
 ### `coerceArray`
