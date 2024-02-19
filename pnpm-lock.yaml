@@ -45,7 +45,7 @@ devDependencies:
     specifier: ^5.2.2
     version: 5.2.2
   valibot:
-    specifier: ^0.19.0
+    specifier: <0.21
     version: 0.19.0
   vite-tsconfig-paths:
     specifier: ^4.2.1
