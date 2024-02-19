@@ -1,5 +1,11 @@
 # valibotx
 
+## 1.5.1
+
+### Patch Changes
+
+- 03829a3: Mark that valibot 0.21+ is not compatible.
+
 ## 1.5.0
 
 ### Minor Changes
