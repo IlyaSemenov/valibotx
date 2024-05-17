@@ -67,6 +67,31 @@ Usage:
 const ids = v.parse(v.coerceArray(v.array(v.string())), query.id)
 ```
 
+## Issues
+
+### `createFlatErrors`
+
+Utility shortcut to simplify creating `FlatErrors`:
+
+- accepts root error(s), nested error(s), or both
+- converts single strings to error lists
+
+Usage:
+
+```ts
+createFlatErrors("Single root error")
+// => FlatErrors { root: ["Single root error"], nested: {} }
+
+createFlatErrors(["Root error 1", "Root error 2"])
+// => FlatErrors { root: ["Root error 1", "Root error 2"], nested: {} }
+
+createFlatErrors({ nested1: "Nested 1", nested2: ["Nested 2a", "Nested 2b"] })
+// => FlatErrors { nested: { nested1: ["Nested 1"], nested2: ["Nested 2a", "Nested 2b"] } }
+
+createFlatErrors("Root", { nested: "Nested" })
+// => FlatErrors { root: ["Root"], nested: { nested: ["Nested"] } }
+```
+
 ## Types
 
 ### `BaseSchemaMaybeAsync`
