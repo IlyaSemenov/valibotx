@@ -1,4 +1,5 @@
-import { BaseSchema, safeParse } from "valibot"
+import type { BaseSchema } from "valibot"
+import { safeParse } from "valibot"
 
 /**
  * Parses unknown input based on a schema.

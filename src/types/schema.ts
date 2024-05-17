@@ -1,4 +1,4 @@
-import { BaseSchema, BaseSchemaAsync } from "valibot"
+import type { BaseSchema, BaseSchemaAsync } from "valibot"
 
 /**
  * Base schema type, either sync or async.

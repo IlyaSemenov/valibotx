@@ -1,4 +1,5 @@
-import { ErrorMessage, minLength } from "valibot"
+import type { ErrorMessage } from "valibot"
+import { minLength } from "valibot"
 
 /**
  * Creates a validation function that validates a string or array to be not empty.

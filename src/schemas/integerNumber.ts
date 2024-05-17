@@ -1,10 +1,12 @@
-import {
-  defaultArgs,
+import type {
   ErrorMessage,
-  integer,
-  number,
   NumberSchema,
   Pipe,
+} from "valibot"
+import {
+  defaultArgs,
+  integer,
+  number,
 } from "valibot"
 
 import { mergePipes } from "../utils"
