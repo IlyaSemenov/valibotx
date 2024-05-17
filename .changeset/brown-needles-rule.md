@@ -1,5 +1,0 @@
----
-"valibotx": minor
----
-
-Add `createFlatErrors`.

@@ -1,5 +1,11 @@
 # valibotx
 
+## 1.7.0
+
+### Minor Changes
+
+- 5dd38d3: Add `createFlatErrors`.
+
 ## 1.6.0
 
 ### Minor Changes
