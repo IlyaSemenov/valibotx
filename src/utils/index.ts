@@ -1,1 +1,1 @@
-export * from "./merge-pipes"
+export * from "./mergePipes"
