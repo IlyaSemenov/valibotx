@@ -1,5 +1,11 @@
 # valibotx
 
+## 2.0.0
+
+### Major Changes
+
+- d985ff2: Rework for valibot 0.31+ with the new pipe API.
+
 ## 1.7.1
 
 ### Patch Changes

@@ -1,7 +1,7 @@
 {
   "name": "valibotx",
   "type": "module",
-  "version": "1.7.1",
+  "version": "2.0.0",
   "description": "Extensions for valibot",
   "author": "Ilya Semenov",
   "license": "MIT",
