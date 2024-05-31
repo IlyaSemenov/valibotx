@@ -6,6 +6,9 @@ valibot maintainers tend to keep the valibot core to the minimum and sometimes [
 
 `valibotx` re-exports `valibot` and adds a set of non-obtrusive extensions. Due to how valibot is organized, this is still perfectly tree-shakeable.
 
+* valibot <0.31: valibotx 1
+* valibot >=0.31: valibotx 2
+
 ## Install
 
 ```sh
@@ -19,7 +22,7 @@ Simply import `valibotx` instead of `valibot` and enjoy both the original and th
 ```ts
 import * as v from "valibotx"
 
-const usernameSchema = v.string([v.trim(), v.nonEmpty(), v.maxLength(100)])
+const integerSchema = v.integerNumber([v.minValue(100)])
 ```
 
 ## Schemas
@@ -31,18 +34,6 @@ Validate integer number.
 ### `naturalNumber`
 
 Validate natural number (positive integer).
-
-## Pipelines
-
-### `nonEmpty`
-
-Shortcut for `minLength(1)`, similar to zod's [nonEmpty](https://github.com/colinhacks/zod#nonempty).
-
-Related issue: https://github.com/fabian-hiller/valibot/issues/171
-
-### `trim`
-
-Shortcut for `toTrimmed()`, named after zod's [trim](https://github.com/colinhacks/zod/#strings).
 
 ## Parse data
 
@@ -64,7 +55,7 @@ Usage:
 
 ```ts
 // works for both single ID and multiple IDs
-const ids = v.parse(v.coerceArray(v.array(v.string())), query.id)
+const ids = v.parse(v.coerceArray(v.array(v.string())), request.query.id)
 ```
 
 ## Issues
@@ -96,6 +87,12 @@ createFlatErrors("Root", { nested: "Nested" })
 
 ### `BaseSchemaMaybeAsync`
 
-Shortcut for `BaseSchema<Input, Output> | BaseSchemaAsync<Input, Output>`.
+Shortcut for `BaseSchema<...> | BaseSchemaAsync<...>` generic.
 
 Related issue: https://github.com/fabian-hiller/valibot/issues/198
+
+### `UnknownBaseSchema`, `UnknownBaseSchemaAsync`, `UnknownBaseSchemaMaybeAsync`
+
+Shortcuts for `BaseSchema`, `BaseSchemaAsync`, `BaseSchemaMaybeAsync` typed against unknown.
+
+To be used as a parameter for high-order schema processors.

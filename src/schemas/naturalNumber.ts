@@ -1,42 +1,11 @@
-import type {
-  ErrorMessage,
-  NumberSchema,
-  Pipe,
-} from "valibot"
-import {
-  defaultArgs,
-  integer,
-  minValue,
-  number,
-} from "valibot"
-
-import { mergePipes } from "../utils"
+import * as v from "valibot"
 
 /**
  * Creates a natural (positive integer) number schema.
  *
- * @param pipe A validation and transformation pipe.
- *
- * @returns A number schema.
+ * @returns A natural number schema.
  */
-export function naturalNumber(pipe?: Pipe<number>): NumberSchema
-/**
- * Creates a natural (positive integer) number schema.
- *
- * @param error The error message.
- * @param pipe A validation and transformation pipe.
- *
- * @returns A number schema.
- */
-export function naturalNumber(
-  error?: ErrorMessage,
-  pipe?: Pipe<number>,
-): NumberSchema
-
-export function naturalNumber(
-  arg1?: ErrorMessage | Pipe<number>,
-  arg2?: Pipe<number>,
-) {
-  const [error, pipe] = defaultArgs(arg1, arg2)
-  return number(error, mergePipes([integer(), minValue(1)], pipe))
+export function naturalNumber(message?: string) {
+  // can't just use v.integer() and v.minValue(1) where, see https://github.com/fabian-hiller/valibot/issues/618
+  return v.pipe(v.number(message), v.custom(x => typeof x === "number" && Number.isInteger(x) && x > 0, message ?? "Natural value expected."))
 }

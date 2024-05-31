@@ -1,5 +1,4 @@
-import type { ArraySchema, BaseSchema } from "valibot"
-import { coerce } from "valibot"
+import * as v from "valibot"
 
 /**
  * Coerces the input of an array schema to be an array.
@@ -9,9 +8,10 @@ import { coerce } from "valibot"
  *
  * @returns The passed schema.
  */
-export function coerceArray<
-  TSchema extends BaseSchema,
-  TArraySchema extends ArraySchema<TSchema>,
->(schema: TArraySchema): TArraySchema {
-  return coerce(schema, x => (Array.isArray(x) ? x : [x]))
+export function coerceArray<const TSchema extends v.ArraySchema<any, any>>(schema: TSchema) {
+  return v.pipe(
+    v.unknown(),
+    v.transform((x: unknown) => Array.isArray(x) ? x : [x]),
+    schema,
+  )
 }
