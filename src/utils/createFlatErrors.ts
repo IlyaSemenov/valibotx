@@ -1,14 +1,14 @@
 import type * as v from "valibot"
 
-import type { UnknownBaseSchemaMaybeAsync } from "../types"
+import type { GenericSchemaMaybeAsync } from "../types"
 
 type SimpleError = string | [string, ...string[]]
 type SimpleNestedErrors = Partial<Record<string, SimpleError>>
 
-export function createFlatErrors<TSchema extends UnknownBaseSchemaMaybeAsync = UnknownBaseSchemaMaybeAsync>(root: SimpleError, nested?: SimpleNestedErrors): v.FlatErrors<TSchema>
-export function createFlatErrors<TSchema extends UnknownBaseSchemaMaybeAsync = UnknownBaseSchemaMaybeAsync>(nested: SimpleNestedErrors): v.FlatErrors<TSchema>
+export function createFlatErrors<TSchema extends GenericSchemaMaybeAsync = GenericSchemaMaybeAsync>(root: SimpleError, nested?: SimpleNestedErrors): v.FlatErrors<TSchema>
+export function createFlatErrors<TSchema extends GenericSchemaMaybeAsync = GenericSchemaMaybeAsync>(nested: SimpleNestedErrors): v.FlatErrors<TSchema>
 
-export function createFlatErrors<TSchema extends UnknownBaseSchemaMaybeAsync = UnknownBaseSchemaMaybeAsync>(rootOrNested: SimpleError | SimpleNestedErrors, nestedOrNothing?: SimpleNestedErrors): v.FlatErrors<TSchema> {
+export function createFlatErrors<TSchema extends GenericSchemaMaybeAsync = GenericSchemaMaybeAsync>(rootOrNested: SimpleError | SimpleNestedErrors, nestedOrNothing?: SimpleNestedErrors): v.FlatErrors<TSchema> {
   const [root, nested] = typeof rootOrNested === "object" && !Array.isArray(rootOrNested)
     ? [undefined, rootOrNested]
     : [rootOrNested, nestedOrNothing]

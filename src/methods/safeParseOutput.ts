@@ -1,7 +1,5 @@
 import * as v from "valibot"
 
-import type { UnknownBaseSchema } from "../types"
-
 /**
  * Parses unknown input based on a schema.
  *
@@ -11,7 +9,7 @@ import type { UnknownBaseSchema } from "../types"
  *
  * @returns The parsed output, or undefined if the parse failed.
  */
-export function safeParseOutput<TSchema extends UnknownBaseSchema>(
+export function safeParseOutput<TSchema extends v.GenericSchema>(
   schema: TSchema,
   input: unknown,
   config?: Omit<v.Config<v.InferIssue<TSchema>>, "skipPipe">,

@@ -85,14 +85,8 @@ createFlatErrors("Root", { nested: "Nested" })
 
 ## Types
 
-### `BaseSchemaMaybeAsync`
+### `BaseSchemaMaybeAsync`, `GenericSchemaMaybeAsync`
 
-Shortcut for `BaseSchema<...> | BaseSchemaAsync<...>` generic.
+Shortcuts for `BaseSchema<...> | BaseSchemaAsync<...>` and `GenericSchema<...> | GenericSchemaAsync<...>`.
 
 Related issue: https://github.com/fabian-hiller/valibot/issues/198
-
-### `UnknownBaseSchema`, `UnknownBaseSchemaAsync`, `UnknownBaseSchemaMaybeAsync`
-
-Shortcuts for `BaseSchema`, `BaseSchemaAsync`, `BaseSchemaMaybeAsync` typed against unknown.
-
-To be used as a parameter for high-order schema processors.
