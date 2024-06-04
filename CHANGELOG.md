@@ -1,5 +1,11 @@
 # valibotx
 
+## 2.0.1
+
+### Patch Changes
+
+- ede159b: Deprecate UnknownBaseSchema family of types.
+
 ## 2.0.0
 
 ### Major Changes
