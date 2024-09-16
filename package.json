@@ -2,6 +2,7 @@
   "name": "valibotx",
   "type": "module",
   "version": "2.0.0",
+  "packageManager": "pnpm@9.8.0",
   "description": "Extensions for valibot",
   "author": "Ilya Semenov",
   "license": "MIT",
@@ -23,6 +24,10 @@
     "dist",
     "src"
   ],
+  "engines": {
+    "node": "22",
+    "pnpm": "9"
+  },
   "scripts": {
     "build": "tsup",
     "lint": "eslint --fix .",
