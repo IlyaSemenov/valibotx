@@ -1,5 +1,12 @@
 # valibotx
 
+## 2.0.1
+
+### Patch Changes
+
+- 85543ea: Remove `"engines"` from `package.json`.
+- ede159b: Deprecate UnknownBaseSchema family of types.
+
 ## 2.0.0
 
 ### Major Changes
