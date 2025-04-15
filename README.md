@@ -43,6 +43,25 @@ Shortcut for `safeParse().output`. Returns `undefined` for failed parse.
 
 Alias: `tryParse`.
 
+## Actions
+
+### `safeUrl`
+
+An extension of `url()` that only allows "safe" URLs by limiting protocols and possibly hostnames. Prevent `javascript:alert('pwn3d')` and other malicious URLs.
+
+Usage:
+
+```ts
+// Allow any https:// URL.
+v.pipe(v.string(), v.safeUrl())
+
+// Allow http and https links to Twitter.
+v.pipe(v.string(), v.safeUrl({
+  protocol: ["http", "https"],
+  hostname: ["twitter.com", "x.com"],
+}))
+```
+
 ## Methods
 
 ### `coerceArray`
