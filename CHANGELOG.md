@@ -1,5 +1,11 @@
 # valibotx
 
+## 2.2.1
+
+### Patch Changes
+
+- 729d00a: Add `safeUrl` export.
+
 ## 2.2.0
 
 ### Minor Changes
