@@ -1,5 +1,11 @@
 # valibotx
 
+## 2.1.0
+
+### Minor Changes
+
+- 711c193: Add `safeUrl`.
+
 ## 2.0.1
 
 ### Patch Changes
