@@ -1,5 +1,11 @@
 # valibotx
 
+## 2.2.0
+
+### Minor Changes
+
+- a5b63c9: Add `flatErrorsParser`, `FlatErrorsError`.
+
 ## 2.1.0
 
 ### Minor Changes
