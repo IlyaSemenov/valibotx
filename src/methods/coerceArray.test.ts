@@ -3,7 +3,7 @@ import { expect, test } from "vitest"
 
 import { coerceArray } from "./coerceArray"
 
-test("main", () => {
+test("coerceArray", () => {
   const schema = coerceArray(v.array(v.string()))
   expect(v.parse(schema, "foo")).toEqual(["foo"])
   expect(v.parse(schema, ["foo"])).toEqual(["foo"])
