@@ -77,6 +77,24 @@ Usage:
 const ids = v.parse(v.coerceArray(v.array(v.string())), request.query.id)
 ```
 
+### `flatErrorsParser`
+
+Works similar to `parser`, but throws a `FlatErrorsError` which is a `Error` with `root`, `nested`, and `other` properties (implementing the interface of `FlatErrors`).
+
+Usage:
+
+```ts
+const parseBody = v.flatErrorsParser(v.object({
+  name: v.string(),
+}))
+
+// h3 handler
+export default defineEventHandler(async (event) => {
+  const body = await readValidatedBody(event, parseBody)
+  // body is validated, or a HTTP 400 with { data: flatErrors } is thrown
+})
+```
+
 ## Issues
 
 ### `createFlatErrors`
