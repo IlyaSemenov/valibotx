@@ -1,5 +1,11 @@
 # valibotx
 
+## 2.2.3
+
+### Patch Changes
+
+- 288f811: Export `CreateFlatErrorsInput` type.
+
 ## 2.2.2
 
 ### Patch Changes
