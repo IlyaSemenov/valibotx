@@ -120,6 +120,8 @@ createFlatErrors("Root", { nested: "Nested" })
 // => FlatErrors { root: ["Root"], nested: { nested: ["Nested"] } }
 ```
 
+To create a wrapper around `createFlatErrors`, import type `CreateFlatErrors`.
+
 ## Types
 
 ### `BaseSchemaMaybeAsync`, `GenericSchemaMaybeAsync`
