@@ -1,5 +1,11 @@
 # valibotx
 
+## 2.2.2
+
+### Patch Changes
+
+- 277d446: Export `CreateFlatErrors` interface.
+
 ## 2.2.1
 
 ### Patch Changes
