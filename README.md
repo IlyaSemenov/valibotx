@@ -120,7 +120,7 @@ createFlatErrors("Root", { nested: "Nested" })
 // => FlatErrors { root: ["Root"], nested: { nested: ["Nested"] } }
 ```
 
-To create a wrapper around `createFlatErrors`, import type `CreateFlatErrors`.
+To create a wrapper around `createFlatErrors`, you can use types `CreateFlatErrors` (the function overload type) or `CreateFlatErrorsInput` (the argument overload tuples).
 
 ## Types
 

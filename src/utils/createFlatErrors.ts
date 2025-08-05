@@ -10,6 +10,8 @@ export interface CreateFlatErrors {
   <TSchema extends GenericSchemaMaybeAsync = GenericSchemaMaybeAsync>(nested: SimpleNestedErrors): v.FlatErrors<TSchema>
 }
 
+export type CreateFlatErrorsInput = [root: SimpleError, nested?: SimpleNestedErrors] | [nested: SimpleNestedErrors]
+
 export const createFlatErrors: CreateFlatErrors = function createFlatErrors(rootOrNested: SimpleError | SimpleNestedErrors, nestedOrNothing?: SimpleNestedErrors): v.FlatErrors<any> {
   const [root, nested] = typeof rootOrNested === "object" && !Array.isArray(rootOrNested)
     ? [undefined, rootOrNested]
