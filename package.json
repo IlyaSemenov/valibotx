@@ -3,7 +3,7 @@
   "type": "module",
   "version": "2.2.3",
   "packageManager": "pnpm@9.8.0",
-  "description": "Extensions for valibot",
+  "description": "Tree-shakeable extensions for Valibot.",
   "author": "Ilya Semenov",
   "license": "MIT",
   "repository": {
